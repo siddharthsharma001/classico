@@ -1,9 +1,14 @@
+
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
+  
   final int days = 1000;
+
   final String name = "web Development";
+
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -11,5 +16,6 @@ class Homepage extends StatelessWidget {
         child: Text("$days days of code of $name"),
       ),
     );
+    
   }
 }
