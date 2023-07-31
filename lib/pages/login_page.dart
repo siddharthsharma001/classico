@@ -1,3 +1,4 @@
+import 'package:classico/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class loginPage extends StatelessWidget {
@@ -10,13 +11,23 @@ class loginPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Login Page"),
       ),
-      body: Column(
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            Image.asset("assets/images/Login_image.png" , fit: BoxFit.fill,),
-            const SizedBox(height: 20.0,),
-            const Text("Welcome" , style: TextStyle(fontSize: 18.0 , fontWeight: FontWeight.bold),),
+            Image.asset(
+              "assets/images/Login_image.png",
+              fit: BoxFit.fill,
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            const Text(
+              "Welcome",
+              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+            ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0 , vertical: 32.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
               child: Column(
                 children: [
                   TextFormField(
@@ -32,25 +43,23 @@ class loginPage extends StatelessWidget {
                       labelText: "Password",
                     ),
                   ),
-
-                  const SizedBox(height: 20.0,), 
-                  
-                  ElevatedButton(onPressed: () {
-                      print("hi siddharth");
-                    },
-                    child: const Text("Login")
+                  const SizedBox(
+                    height: 20.0,
                   ),
-
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, myRoutes.homeRoute);
+                      },
+                      child: const Text("Login")),
                 ],
               ),
             )
-            
           ],
+        ),
       ),
       drawer: const Drawer(
         child: Center(child: Text("Teri maa ki chut rajinder")),
       ),
-
     );
   }
 }
