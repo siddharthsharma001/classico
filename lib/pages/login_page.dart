@@ -18,7 +18,7 @@ class _loginPageState extends State<loginPage> {
 
   // ignore: non_constant_identifier_names
   MoveToHome(BuildContext context) async {
-    if(_formkey.currentState!.validate()){
+    if (_formkey.currentState!.validate()) {
       setState(() {
         isbuttonclicked = true;
       });
@@ -73,7 +73,7 @@ class _loginPageState extends State<loginPage> {
                         if (value != null && value.isEmpty) {
                           return "Username can't be empty";
                         }
-                        
+
                         return null;
                       },
                     ),
@@ -86,8 +86,7 @@ class _loginPageState extends State<loginPage> {
                       validator: (value) {
                         if (value != null && value.isEmpty) {
                           return "Password can't be empty";
-                        }
-                        else if (value != null && value.length < 6) {
+                        } else if (value != null && value.length < 6) {
                           return "Password should be atleast 6 digit";
                         }
                         return null;
