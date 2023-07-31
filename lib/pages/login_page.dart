@@ -47,7 +47,9 @@ class loginPage extends StatelessWidget {
             
           ],
       ),
-      drawer: const Drawer(),
+      drawer: const Drawer(
+        child: Center(child: Text("Teri maa ki chut rajinder")),
+      ),
 
     );
   }
