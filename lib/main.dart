@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'pages/Home_page.dart';
+
 void main() {
   runApp(const Myapp());
 }
@@ -12,8 +13,10 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     // int days = 500;
     // String name = "web development";
+
     return const MaterialApp(
-        home: Homepage()
-      );
+      home: Homepage(),
+      themeMode: ThemeMode.light,
+    );
   }
 }
