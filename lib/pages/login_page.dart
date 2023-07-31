@@ -35,7 +35,7 @@ class _loginPageState extends State<loginPage> {
             ),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
+                  const EdgeInsets.symmetric(horizontal: 35.0, vertical: 35.0),
               child: Column(
                 children: [
                   TextFormField(
