@@ -6,18 +6,16 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final String apkname =  "CataLog App";
+    const String apkname =  "CataLog App";
     
     return Scaffold(
       appBar: AppBar(
-        title: Text(apkname),
+        title: const Text(apkname),
       ),
-      body: Center(
-        child: Container(
-          child: Text("Welcome to 30 days of code"),
-        ),
+      body: const Center(
+        child: Text("Welcome to 30 days of code"),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }
