@@ -1,4 +1,5 @@
 import 'package:classico/utils/routes.dart';
+import 'package:classico/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -36,7 +37,7 @@ class _loginPageState extends State<loginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("Login Page"),
+        title: const Text("Login Page" , textScaleFactor: 1.3, style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -127,9 +128,7 @@ class _loginPageState extends State<loginPage> {
           ),
         ),
       ),
-      drawer: const Drawer(
-        child: Center(child: Text("This App is made by siddharth Sharma")),
-      ),
+      drawer: const MyDrawer(),
     );
   }
 }
