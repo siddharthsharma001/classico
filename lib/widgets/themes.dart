@@ -10,6 +10,7 @@ class Mythemes{
       titleTextStyle: TextStyle(color: Colors.black ,),centerTitle: true,
     ),
   );
+  
   static ThemeData darkTheme(BuildContext context) => ThemeData(
       brightness: Brightness.dark,
   );
