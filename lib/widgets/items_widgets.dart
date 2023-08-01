@@ -9,11 +9,11 @@ class itemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 0.0),
       child: Card(
         elevation: 10.0,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 8.0),
           child: ListTile(
             onTap: () {
               print("item ${item.name} pressed");
@@ -30,6 +30,7 @@ class itemWidget extends StatelessWidget {
           ),
         ),
       ),
+      
     );
   }
 }

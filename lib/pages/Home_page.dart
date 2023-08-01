@@ -10,7 +10,7 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const String apkname = "CataLog App";
-
+    final dummylist = List.generate(10, (index) => CatalogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -20,16 +20,16 @@ class Homepage extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-        itemCount: CatalogModel.items.length,
+        itemCount: dummylist.length,
         itemBuilder: (context, index) {
           // item builder will give us a index or position
           // catalog model ke andar ek hi element hai aur uska index 0 hai
-          return itemWidget(item: CatalogModel.items[index],);
+          return itemWidget(
+            item: dummylist[index],
+          );
         },
       ),
       drawer: const MyDrawer(),
     );
   }
-  
-  
 }
