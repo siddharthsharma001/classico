@@ -10,7 +10,7 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const String apkname = "CataLog App";
-    final dummylist = List.generate(10, (index) => CatalogModel.items[0]);
+    final dummylist = List.generate(4, (index) => CatalogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: const Text(
