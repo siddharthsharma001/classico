@@ -1,10 +1,11 @@
 import 'package:classico/utils/routes.dart';
+import 'package:classico/widgets/themes.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/Home_page.dart';
 import 'pages/login_page.dart';
 void main() {
-  runApp(Myapp());
+  runApp(const Myapp());
 }
 
 class Myapp extends StatelessWidget {
@@ -16,14 +17,14 @@ class Myapp extends StatelessWidget {
       // home: loginPage(),
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: Mythemes.lightTheme(context),
+      darkTheme: Mythemes.darkTheme(context),
 
       initialRoute: myRoutes.homeRoute,
 
       routes: {
-        myRoutes.homeRoute :(context) => Homepage(),
-        myRoutes.loginRoute :(context) => loginPage(),
+        myRoutes.homeRoute :(context) => const Homepage(),
+        myRoutes.loginRoute :(context) => const loginPage(),
       },
     );
   }

@@ -10,12 +10,12 @@ class Homepage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(apkname),
+        title: const Text(apkname , textScaleFactor: 1.3, style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: const Center(
         child: Text("Welcome to 30 days of code"),
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
     );
   }
 }
